@@ -14,7 +14,7 @@ prefix = "$$"
 #use the .env feature to hide your token
 
 keep_alive()
-token = "mfa.4DxbgfbJPwfKLH69pJ_nBp_aLu8bFHcU-a_w53XnJaIcGTDpDn1kujSVsZJ9fJz7fHugpzoxCq8AlmlfESiy"
+token = os.environ('TOKEN')
 #---------------#
 
 client = commands.Bot(command_prefix=prefix,
