@@ -36,7 +36,7 @@ async def start(ctx):
 	owocs = True
 	while owocs:
 		async with ctx.typing():
-			 await asyncio.sleep(47)
+			 await asyncio.sleep(17)
 			 await ctx.send('owo flip 1')
 			 print(f"{Fore.GREEN}succefully fliped")
 			 await asyncio.sleep(17)
