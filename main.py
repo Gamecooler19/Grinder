@@ -37,8 +37,8 @@ async def start(ctx):
 	while owocs:
 		async with ctx.typing():
 			 await asyncio.sleep(17)
-			 await ctx.send('owo flip 1')
-			 print(f"{Fore.GREEN}succefully fliped")
+			 await ctx.send('owo pray <@758697679667855433>')
+			 print(f"{Fore.GREEN}succefully prayed")
 			 await asyncio.sleep(17)
 			 await ctx.send('owo flip 1')
 			 print(f"{Fore.GREEN}succefully fliped")
