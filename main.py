@@ -1,3 +1,4 @@
+
 import discord
 from discord.ext import commands
 import colorama
@@ -6,7 +7,7 @@ import asyncio
 from webserver import keep_alive
 
 import os
-
+my_secret = os.environ['TOKEN']
 #-----SETUP-----#
 
 prefix = "$$"
@@ -14,7 +15,7 @@ prefix = "$$"
 #use the .env feature to hide your token
 
 keep_alive()
-token = os.environ('TOKEN')
+token = os.environ['TOKEN']
 #---------------#
 
 client = commands.Bot(command_prefix=prefix,
@@ -23,10 +24,9 @@ client = commands.Bot(command_prefix=prefix,
                    self_bot=True)
 
 @client.command()
-async def help(ctx, colour, title, description, *,url):
-  embed = discord.Embed(title="Gamecooler19's Grinder Self Bot", type='rich', color=420699, description=f"**{prefix}owostart**\n Sends A OwO Trick Made By Gamecooler19 In Every 50 seconds.\n\n**{prefix}owostop**\n Stops Auto OwO. \n\n\n\n**{prefix}dmcstart**\n Sends A Dank Memer Trick Made By Gamecooler19 In Every 50 seconds.\n\n**{prefix}dmcstop**\n Stops Auto Dank Memer.")
-  embed.set_thumbnail(url="https://cdn.discordapp.com/icons/917333971061329930/a_dd370765088466ccd900412d75eb29d9.gif?size=1024")
-  await ctx.send(embed=embed)
+async def help(ctx):
+  await ctx.send("_**Gamecooler19's Grinder Self**_  Bot\n\n**$$owostart**\n Sends A OwO Trick Made By Gamecooler19 In Every 50 seconds.\n\n**$$owostop**\n Stops Auto OwO. \n\n**$$dmcstart**\n Sends A Dank Memer Trick Made By Gamecooler19 In Every 50 seconds.\n\n**$$dmcstop**\n Stops Auto Dank Memer.")
+
 
 @client.command(pass_context=True)
 async def owostart(ctx):
@@ -88,7 +88,7 @@ async def dmcstop(ctx):
 
 @client.event
 async def on_ready():
-  activity = discord.ActivityType.watching(name="Gamecooler19 On Youtube")
+  activity = discord.Game(name="Gamecooler19 On Youtube", type=4)
   await client.change_presence(status=discord.Status.dnd, activity=activity)
   print(f'''{Fore.RED} 
  
