@@ -25,7 +25,7 @@ client = commands.Bot(command_prefix=prefix,
 
 @client.command()
 async def help(ctx):
-  await ctx.send("_**Gamecooler19's Grinder Self**_  Bot\n\n**$$owostart**\n Sends A OwO Trick Made By Gamecooler19 In Every 50 seconds.\n\n**$$owostop**\n Stops Auto OwO. \n\n**$$dmcstart**\n Sends A Dank Memer Trick Made By Gamecooler19 In Every 50 seconds.\n\n**$$dmcstop**\n Stops Auto Dank Memer.")
+  await ctx.send("_**Gamecooler19's Grinder Self Bot**_\n\n**$$owostart**\n Sends A OwO Trick Made By Gamecooler19 In Every 50 seconds.\n\n**$$owostop**\n Stops Auto OwO. \n\n**$$dmcstart**\n Sends A Dank Memer Trick Made By Gamecooler19 In Every 50 seconds.\n\n**$$dmcstop**\n Stops Auto Dank Memer.")
 
 
 @client.command(pass_context=True)
