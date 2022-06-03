@@ -8,15 +8,12 @@ from webserver import keep_alive
 
 import os
 my_secret = os.environ['TOKEN']
-#-----SETUP-----#
 
 prefix = "$$"
 
-#use the .env feature to hide your token
-
 keep_alive()
 token = os.environ['TOKEN']
-#---------------#
+
 
 client = commands.Bot(command_prefix=prefix,
                    help_command=None,
